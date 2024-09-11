@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar with Dropdown Menus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <div class="top-nav">
+        <!-- Integrated Toggle Button -->
+        <button id="toggle-btn" class="toggle-btn" onclick="toggleSidebar()">☰</button>
+        <!-- Company Name -->
+        <span class="company-name">AquaOasisStaking</span>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <!-- Dashboard Section -->
+        <div class="sidebar-item">
+            <button class="dropdown-btn">Dashboard</button>
+            <div class="dropdown-container">
+                <a href="#" data-target="overview">Overview</a>
+                <a href="#" data-target="activity">Activity</a>
+                <a href="#" data-target="reports">Reports</a>
+            </div>
+        </div>
+
+        <!-- Portfolio Section -->
+        <div class="sidebar-item">
+            <button class="dropdown-btn">Portfolio</button>
+            <div class="dropdown-container">
+                <a href="#" data-target="view-portfolio">View Portfolio</a>
+                <a href="#" data-target="manage-assets">Manage Assets</a>
+                <a href="#" data-target="performance-analytics">Performance Analytics</a>
+            </div>
+        </div>
+
+        <!-- Staking Section -->
+        <div class="sidebar-item">
+            <button class="dropdown-btn">Staking</button>
+            <div class="dropdown-container">
+                <a href="#" data-target="stake-avax">Stake AVAX</a>
+                <a href="#" data-target="stake-atom">Stake ATOM</a>
+                <a href="#" data-target="stake-sol">Stake SOL</a>
+                <a href="#" data-target="stake-eth">Stake ETH</a>
+                <a href="#" data-target="stake-ada">Stake ADA</a>
+                <a href="#" data-target="stake-arb">Stake ARB</a>
+                <a href="#" data-target="stake-op">Stake OP</a>
+                <a href="#" data-target="stake-sui">Stake SUI</a>
+                <a href="#" data-target="stake-ton">Stake TON</a>
+            </div>
+        </div>
+
+        <!-- Rewards Section -->
+        <div class="sidebar-item">
+            <button class="dropdown-btn">Rewards</button>
+            <div class="dropdown-container">
+                <a href="#" data-target="view-rewards">View Rewards</a>
+                <a href="#" data-target="claim-rewards">Claim Rewards</a>
+            </div>
+        </div>
+
+        <!-- Swaps Section -->
+        <div class="sidebar-item">
+            <button class="dropdown-btn">Swaps</button>
+            <div class="dropdown-container">
+                <a href="#" data-target="token-swaps">Token Swaps</a>
+                <a href="#" data-target="liquidity-pools">Liquidity Pools</a>
+            </div>
+        </div>
+
+        <!-- Connecting Section -->
+        <div class="sidebar-item">
+            <button class="dropdown-btn">Connecting</button>
+            <div class="dropdown-container">
+                <a href="#" data-target="connect-wallet">Connect Wallet</a>
+                <a href="#" data-target="api-integrations">API Integrations</a>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="sidebar-item">
+            <button class="dropdown-btn">Charts</button>
+            <div class="dropdown-container">
+                <a href="#" data-target="market-charts">Market Charts</a>
+                <a href="#" data-target="historical-data">Historical Data</a>
+            </div>
+        </div>
+
+        <!-- Earned Section -->
+        <div class="sidebar-item">
+            <button class="dropdown-btn">Earned</button>
+            <div class="dropdown-container">
+                <a href="#" data-target="view-earnings">View Earnings</a>
+                <a href="#" data-target="calculate-yield">Calculate Yield</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="main-content">
+        <!-- Content for different sections -->
+        <div id="overview" class="content-section">
+            <h1>Overview</h1>
+            <p>This is the Overview content.</p>
+        </div>
+
+        <div id="activity" class="content-section" style="display: none;">
+            <h1>Activity</h1>
+            <p>This is the Activity content.</p>
+        </div>
+
+        <div id="reports" class="content-section" style="display: none;">
+            <h1>Reports</h1>
+            <p>This is the Reports content.</p>
+        </div>
+
+        <div id="view-portfolio" class="content-section" style="display: none;">
+            <h1>View Portfolio</h1>
+            <p>This is the View Portfolio content.</p>
+        </div>
+
+        <div id="manage-assets" class="content-section" style="display: none;">
+            <h1>Manage Assets</h1>
+            <p>This is the Manage Assets content.</p>
+        </div>
+
+        <div id="performance-analytics" class="content-section" style="display: none;">
+            <h1>Performance Analytics</h1>
+            <p>This is the Performance Analytics content.</p>
+        </div>
+
+        <!-- Additional sections for other links -->
+        <div id="view-rewards" class="content-section" style="display: none;">
+            <h1>View Rewards</h1>
+            <p>This is the View Rewards content.</p>
+        </div>
+
+        <div id="claim-rewards" class="content-section" style="display: none;">
+            <h1>Claim Rewards</h1>
+            <p>This is the Claim Rewards content.</p>
+        </div>
+
+        <!-- Add other content sections similarly -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
