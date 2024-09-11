@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    width: 100%;
+    background-color: #007f7f; /* Aqua Blue Dark */
+    color: white;
+    display: flex;
+    justify-content: center; /* Center company name */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px;
+    position: fixed; /* Fixed to the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays on top */
+    height: 60px; /* Fixed height */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-bottom: 2px solid #00cccc; /* Border at the bottom of the top nav */
+}
+
+.company-name {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px; /* Slightly spaced letters */
+    font-family: 'Georgia', serif; /* A more elegant font style */
+    color: #00cccc; /* Aqua color for the company name */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+/* Integrated Toggle Button */
+.toggle-btn {
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: #00cccc; /* Aqua Blue */
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px; /* Rounded button */
+    margin-right: auto; /* Align to the left */
+    margin-left: 10px; /* Space from the left */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+    position: absolute; /* Position it on the left side of the nav */
+    left: 10px; /* Adjust for space */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #007f7f; /* Aqua Blue Dark */
+    height: calc(100vh - 60px); /* Adjust height to exclude top nav height */
+    overflow-y: auto;
+    padding-top: 20px; /* Offset for inner padding */
+    position: fixed;
+    left: -270px; /* Start off-screen with border width considered */
+    top: 60px; /* Align under the top navigation bar */
+    transition: left 0.3s ease; /* Smooth transition */
+    z-index: 900; /* Below the top navigation bar */
+    border: 2px solid #00cccc; /* Aqua Blue border */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.sidebar-item {
+    padding: 10px 15px;
+}
+
+.dropdown-btn {
+    background-color: #009999; /* Aqua Blue Medium */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-align: left;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropdown-container {
+    display: none;
+    background-color: #00b3b3; /* Aqua Blue Light */
+    padding-left: 20px;
+    width: calc(100% - 40px); /* Ensure full width within sidebar */
+}
+
+.dropdown-container a {
+    color: white;
+    padding: 8px 0;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-container a:hover {
+    background-color: #00cccc; /* Aqua Blue Hover */
+}
+
+.dropdown-btn.active {
+    background-color: #00cccc; /* Aqua Blue Active */
+}
+
+.main-content {
+    margin-left: 0; /* Reset margin for normal content positioning */
+    padding: 80px 20px 20px 20px; /* Adjust padding for top navigation bar */
+    transition: margin-left 0.3s ease; /* Smooth transition */
+    flex: 1; /* Allow content to expand */
+}
+
+/* Open Sidebar Styles */
+.sidebar-open #sidebar {
+    left: 0; /* Slide sidebar in */
+}
+
+.sidebar-open .main-content {
+    margin-left: 270px; /* Push content to the right, including border */
+}
